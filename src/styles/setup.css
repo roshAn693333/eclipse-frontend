@@ -1,0 +1,115 @@
+/* ===== Cycle Setup – Premium Pink Theme ===== */
+
+.setup-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 20px 32px;
+  background: linear-gradient(
+    180deg,
+    #fff6fa 0%,
+    #ffffff 100%
+  );
+  border-radius: 20px;
+}
+
+.setup-container h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.setup-container .subtitle {
+  font-size: 0.95rem;
+  color: #8a6f7c;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* Labels */
+.setup-container label {
+  display: block;
+  font-size: 0.85rem;
+  color: #7a5c68;
+  margin-bottom: 6px;
+  margin-top: 16px;
+}
+
+/* Inputs & Select */
+.setup-container input,
+.setup-container select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  border: 1px solid #f0d7e2;
+  background-color: #fff;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Focus state */
+.setup-container input:focus,
+.setup-container select:focus {
+  border-color: #c94a7c;
+  box-shadow: 0 0 0 3px rgba(201, 74, 124, 0.15);
+}
+
+/* Buttons container */
+.setup-container button {
+  padding: 12px 18px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Primary save button */
+.setup-container button:first-child {
+  background: linear-gradient(
+    135deg,
+    #c94a7c,
+    #e06a9f
+  );
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 6px 14px rgba(201, 74, 124, 0.25);
+}
+
+/* Hover */
+.setup-container button:first-child:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(201, 74, 124, 0.3);
+}
+
+/* Cancel button */
+.setup-container button:last-child {
+  background: transparent;
+  color: #8a6f7c;
+}
+
+/* Cancel hover */
+.setup-container button:last-child:hover {
+  color: #c94a7c;
+}
+
+/* Mobile spacing */
+@media (max-width: 480px) {
+  .setup-container {
+    padding: 20px 16px 28px;
+  }
+}
+.edit-cycle-link {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #c94a7c;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.edit-cycle-link:hover {
+  text-decoration: underline;
+}

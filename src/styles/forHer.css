@@ -1,0 +1,102 @@
+.for-her {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #fff1f7 0%,
+    #fff7fb 40%,
+    #ffffff 100%
+  );
+  padding: 30px 20px 110px;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* Header */
+.for-her-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #3a2d34;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #9a7f8a;
+}
+
+/* Cards */
+.card {
+  max-width: 460px;
+  margin: 0 auto 22px;
+  border-radius: 26px;
+  padding: 24px 22px;
+}
+
+/* Extra soft card look */
+.soft-card {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #fff4f9 100%
+  );
+  box-shadow: 0 18px 40px rgba(246, 165, 192, 0.28);
+}
+
+/* Text */
+.line {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #5c4a54;
+  margin-bottom: 14px;
+}
+
+/* Highlighted emotional line */
+.highlight {
+  color: #e46b9c;
+  font-weight: 500;
+}
+
+/* Section titles */
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 14px;
+  color: #3a2d34;
+}
+
+/* List */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  font-size: 0.9rem;
+  padding: 7px 0;
+  color: #6f5a64;
+}
+
+/* Note card */
+.note {
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #ffe6f0,
+    #ffffff
+  );
+}
+
+.note-text {
+  font-size: 0.95rem;
+  color: #5c4a54;
+}
+
+.note-soft {
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: #b07a92;
+}

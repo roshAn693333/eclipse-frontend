@@ -1,0 +1,17 @@
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 430px;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  background: #ffffff;
+  border-top: 1px solid #eee;
+}
+
+.nav button {
+  background: none;
+  border: none;
+  font-size: 22px;
+}

@@ -1,0 +1,264 @@
+.home {
+  padding: 20px;
+}
+
+.greeting {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.message-card {
+  background: #ffeaf4;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.mood-box {
+  text-align: center;
+}
+
+.mood-title {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.moods button {
+  font-size: 26px;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #f5f5f5;
+}
+/* 🌸 Premium Additions */
+
+.cycle-card {
+  margin-top: 30px;
+  padding: 26px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #f6c1cc, #e88aae);
+  color: white;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(232, 138, 174, 0.45);
+}
+
+.cycle-label {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.cycle-days {
+  font-size: 42px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.cycle-phase {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.insight-card {
+  margin-top: 20px;
+  padding: 18px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.insight-card h4 {
+  margin-bottom: 6px;
+  color: #3a2c2c;
+}
+
+.insight-card p {
+  color: #777;
+  font-size: 14px;
+}
+
+.quick-actions {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.action-card {
+  background: white;
+  padding: 18px;
+  border-radius: 22px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.action-card:active {
+  transform: scale(0.96);
+}
+
+.daily-care {
+  margin: 30px 0 10px;
+  text-align: center;
+  color: #c94a7c;
+  font-size: 14px;
+}
+/* 🌸 STEP 1 — About Her Day */
+
+.day-box {
+  margin-top: 24px;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.day-title {
+  font-weight: 600;
+  color: #3a2c2c;
+  margin-bottom: 12px;
+}
+
+.day-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.day-options button {
+  background: #fff7fa;
+  border: none;
+  border-radius: 18px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.day-response {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #c94a7c;
+}
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.action-card {
+  background: white;
+  border-radius: 20px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.action-card:active {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.cycle-review-card {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(201, 74, 124, 0.08);
+  text-align: center;
+}
+
+.cycle-review-card p {
+  font-size: 0.9rem;
+  color: #7a2e4d;
+  margin-bottom: 8px;
+}
+
+.cycle-review-card button {
+  background: none;
+  border: 1px solid #c94a7c;
+  color: #c94a7c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+.phase-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+
+.phase-pill {
+  flex: 1;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 0.75rem;
+  border-radius: 14px;
+  background: #f3f3f3;
+  color: #777;
+}
+
+.phase-pill.active {
+  background: #c94a7c;
+  color: #fff;
+  font-weight: 500;
+}
+.daily-checkin {
+  margin-top: 18px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(201, 74, 124, 0.06);
+}
+
+.checkin-title {
+  font-size: 0.9rem;
+  color: #7a2e4d;
+  margin-bottom: 10px;
+}
+
+.checkin-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.checkin-options button {
+  flex: 1 1 45%;
+  background: #fff;
+  border: 1px solid #f0c1d4;
+  border-radius: 14px;
+  padding: 8px;
+  font-size: 0.85rem;
+  color: #7a2e4d;
+}
+
+.checkin-response {
+  font-size: 0.85rem;
+  color: #7a2e4d;
+}
+.partner-insight {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(201, 74, 124, 0.08);
+  font-size: 0.9rem;
+}
+
+.partner-insight p {
+  margin: 0;
+  font-weight: 600;
+  color: #c94a7c;
+}
+
+.partner-insight span {
+  display: block;
+  margin-top: 4px;
+  color: #555;
+}

@@ -1,0 +1,199 @@
+/* ===== Period Care – Premium Home-Matched Theme ===== */
+
+.period-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 24px 18px 36px;
+  background: linear-gradient(
+    180deg,
+    #fff6fa 0%,
+    #ffffff 100%
+  );
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(201, 74, 124, 0.08);
+}
+
+/* Header */
+.period-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.period-header h2 {
+  font-size: 1.55rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #c94a7c;
+}
+
+.period-header .subtitle {
+  font-size: 0.9rem;
+  color: #8a6f7c;
+}
+
+/* Sections / Cards */
+.period-section {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 22px rgba(201, 74, 124, 0.08);
+  animation: fadeUp 0.45s ease-out;
+}
+
+/* Comfort text */
+.comfort-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #5e4b55;
+  text-align: center;
+}
+
+/* Labels */
+.period-section label {
+  display: block;
+  font-size: 0.85rem;
+  color: #7a5c68;
+  margin-top: 14px;
+  margin-bottom: 6px;
+}
+
+/* Inputs & Selects */
+.period-section select,
+.period-section input[type="date"],
+.period-section input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border-radius: 14px;
+  border: 1px solid #f0d7e2;
+  background: #ffffff;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.period-section select:focus,
+.period-section input:focus {
+  border-color: #c94a7c;
+  box-shadow: 0 0 0 3px rgba(201, 74, 124, 0.15);
+}
+
+/* Primary button */
+.period-section button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 13px;
+  border-radius: 18px;
+  border: none;
+  font-size: 0.95rem;
+  background: linear-gradient(
+    135deg,
+    #c94a7c,
+    #e06a9f
+  );
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(201, 74, 124, 0.28);
+  transition: all 0.25s ease;
+}
+
+.period-section button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(201, 74, 124, 0.35);
+}
+
+/* Cravings */
+.cravings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cravings-grid button {
+  padding: 11px 10px;
+  border-radius: 16px;
+  border: 1px solid #f0d7e2;
+  background: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cravings-grid button:hover {
+  border-color: #c94a7c;
+  transform: translateY(-1px);
+}
+
+.cravings-grid button.active {
+  background: #c94a7c;
+  color: #ffffff;
+  border-color: #c94a7c;
+}
+
+/* Small messages */
+.craving-text,
+.notify-text {
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 12px;
+  color: #7a5c68;
+}
+
+/* Center text (empty states) */
+.center {
+  text-align: center;
+  color: #8a6f7c;
+  padding: 42px 16px;
+}
+
+/* ===== Shared Animations (Matches Home) ===== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover lift consistency */
+.message-card,
+.cycle-card,
+.insight-card,
+.period-section,
+.action-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.message-card:hover,
+.cycle-card:hover,
+.insight-card:hover,
+.period-section:hover,
+.action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(201, 74, 124, 0.15);
+}
+
+/* Button tap feedback */
+button,
+.action-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:active,
+.action-card:active {
+  transform: scale(0.97);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

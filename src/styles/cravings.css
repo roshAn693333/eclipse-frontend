@@ -1,0 +1,19 @@
+.cravings {
+  padding: 20px;
+}
+
+.cravings h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.craving-options button {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  border: none;
+  background: #fff0f6;
+  font-size: 15px;
+  text-align: left;
+}
