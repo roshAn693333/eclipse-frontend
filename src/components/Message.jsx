@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 import "../styles/message.css";
 
 export default function Message({ goBack }) {
@@ -10,21 +11,15 @@ export default function Message({ goBack }) {
 
     setStatus("sending");
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000); // 8s safety timeout
-
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/send-message`,
+      await emailjs.send(
+        "service_vmbrbey",        // ✅ YOUR SERVICE ID
+        "sx7bodi",               // ✅ YOUR TEMPLATE ID
         {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message }),
-          signal: controller.signal,
-        }
+          message: message,      // must match {{message}} in template
+        },
+        "F-7bfeFicv7cGw6hO"       // ✅ YOUR PUBLIC KEY
       );
-
-      if (!res.ok) throw new Error("Request failed");
 
       setMessage("");
       setStatus("sent");
@@ -33,8 +28,6 @@ export default function Message({ goBack }) {
       console.error("Send message failed:", err);
       setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
-    } finally {
-      clearTimeout(timeout);
     }
   };
 
