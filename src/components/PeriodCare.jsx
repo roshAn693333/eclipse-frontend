@@ -3,6 +3,8 @@ import { getComfortMessage } from "../utils/comfortMessages";
 import { getCycleStatus } from "../utils/cycleEngine";
 import "../styles/period.css";
 import { getSelfCareSuggestion } from "../utils/selfCareSuggestions";
+import emailjs from "emailjs-com";
+
 
 export default function PeriodCare({ cycleData }) {
   const [mood, setMood] = useState("");
@@ -33,11 +35,15 @@ export default function PeriodCare({ cycleData }) {
     }
 
     if (alertMessage) {
-      fetch(`${import.meta.env.VITE_API_URL}/api/send-message`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: alertMessage }),
-      });
+     emailjs.send(
+  "service_li74czo",
+  "template_3a3tdat",
+  {
+    message: alertMessage,
+  },
+  "8Jbj_zioBOBsP8tdc"
+);
+
 
       localStorage.setItem("periodAlertSentAt", today);
     }
@@ -80,11 +86,14 @@ Pain: ${painLevel}
 `;
 
     try {
-      await fetch(`${import.meta.env.VITE_API_URL}/api/send-message`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: emailMessage }),
-      });
+      await emailjs.send(
+  "service_li74czo",
+  "template_3a3tdat",
+  {
+    message: emailMessage,
+  },
+  "8Jbj_zioBOBsP8tdc"
+);
 
       setNotified(true);
     } catch (error) {
