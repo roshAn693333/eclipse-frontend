@@ -53,7 +53,7 @@ function App() {
 
     const interval = setInterval(async () => {
       try {
-        const res = await fetch("http://localhost:5000/notify-latest");
+        const res = await fetch(`${import.meta.env.VITE_API_URL}/notify-latest`);
         const data = await res.json();
 
         if (data?.title) {
