@@ -14,7 +14,7 @@ export default function Message({ goBack }) {
     try {
       await emailjs.send(
         "service_vmbrbey",        // ✅ YOUR SERVICE ID
-        "sx7bodi",               // ✅ YOUR TEMPLATE ID
+        "template_3a3tdat",               // ✅ YOUR TEMPLATE ID
         {
           message: message,      // must match {{message}} in template
         },
