@@ -33,7 +33,7 @@ export default function PeriodCare({ cycleData }) {
     }
 
     if (alertMessage) {
-      fetch("http://localhost:5000/api/send-message", {
+      fetch(`${import.meta.env.VITE_API_URL}/api/send-message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: alertMessage }),
@@ -80,7 +80,7 @@ Pain: ${painLevel}
 `;
 
     try {
-      await fetch("http://localhost:5000/api/send-message", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/send-message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: emailMessage }),
