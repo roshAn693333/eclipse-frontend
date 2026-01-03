@@ -13,12 +13,12 @@ export default function Message({ goBack }) {
 
     try {
       await emailjs.send(
-        "service_vmbrbey",        // ✅ YOUR SERVICE ID
+        "service_li74czo",        // ✅ YOUR SERVICE ID
         "template_3a3tdat",               // ✅ YOUR TEMPLATE ID
         {
           message: message,      // must match {{message}} in template
         },
-        "F-7bfeFicv7cGw6hO"       // ✅ YOUR PUBLIC KEY
+        "8Jbj_zioBOBsP8tdc"       // ✅ YOUR PUBLIC KEY
       );
 
       setMessage("");
