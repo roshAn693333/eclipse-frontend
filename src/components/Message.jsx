@@ -11,11 +11,14 @@ export default function Message({ goBack }) {
     setStatus("sending");
 
     try {
-      const res = await fetch("http://localhost:5000/api/send-message", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/send-message`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message }),
+        }
+      );
 
       if (!res.ok) throw new Error("Failed");
 
@@ -33,7 +36,6 @@ export default function Message({ goBack }) {
 
       <h2 className="title">Write to me 🤍</h2>
 
-      {/* SOFT INTRO TEXT */}
       <div className="intro-card">
         <p>
           This space is for moments when you don’t know what to say,
@@ -45,10 +47,11 @@ export default function Message({ goBack }) {
           Write exactly what you feel
           even if it’s messy, even if it’s small.
         </p>
+
         <p>
           If something is bothering you,
-or if you need me to know something important,
-you can tell me here.
+          or if you need me to know something important,
+          you can tell me here.
         </p>
 
         <p className="intro-soft">
@@ -56,7 +59,6 @@ you can tell me here.
         </p>
       </div>
 
-      {/* MESSAGE BOX */}
       <textarea
         placeholder="Type anything you feel..."
         value={message}
@@ -64,9 +66,8 @@ you can tell me here.
       />
 
       <button className="send-btn thick" onClick={sendMessage}>
-  {status === "sending" ? "Sending…" : "Send 🤍"}
-</button>
-
+        {status === "sending" ? "Sending…" : "Send 🤍"}
+      </button>
 
       {status === "sent" && (
         <p className="status success">
