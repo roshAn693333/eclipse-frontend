@@ -10,6 +10,9 @@ export default function Message({ goBack }) {
 
     setStatus("sending");
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000); // 8s safety timeout
+
     try {
       const res = await fetch(
         `${import.meta.env.VITE_API_URL}/api/send-message`,
@@ -17,16 +20,21 @@ export default function Message({ goBack }) {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message }),
+          signal: controller.signal,
         }
       );
 
-      if (!res.ok) throw new Error("Failed");
+      if (!res.ok) throw new Error("Request failed");
 
       setMessage("");
       setStatus("sent");
       setTimeout(() => setStatus("idle"), 3000);
-    } catch {
+    } catch (err) {
+      console.error("Send message failed:", err);
       setStatus("error");
+      setTimeout(() => setStatus("idle"), 3000);
+    } finally {
+      clearTimeout(timeout);
     }
   };
 
